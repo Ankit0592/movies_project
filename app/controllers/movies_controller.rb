@@ -1,9 +1,11 @@
 class MoviesController < ApplicationController
 	layout 'movie'
 	def index
-		# Index page
 	 @demo=true
 		@movies=Movie.all
+
+		#testing
+		abc = 1
 	end	
 	def show
 		@demo=true
