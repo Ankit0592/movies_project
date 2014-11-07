@@ -1,12 +1,8 @@
 class MoviesController < ApplicationController
 	layout 'movie'
 	def index
-		# Index page
 	 @demo=true
 		@movies=Movie.all
-
-		ertret
-		rte
 	end	
 	def show
 		@demo=true
