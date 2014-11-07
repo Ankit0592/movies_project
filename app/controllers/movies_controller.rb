@@ -41,6 +41,7 @@ class MoviesController < ApplicationController
   end 
  
 	def create
+		#create
 	 	 @demo=true
 
 	 	movie=Movie.new(movie_params)
