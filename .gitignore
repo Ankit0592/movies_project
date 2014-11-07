@@ -15,3 +15,4 @@
 /log/*.log
 /tmp
 public/
+app/views/shared1/_top_nav.html.erb
