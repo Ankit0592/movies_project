@@ -1,0 +1,9 @@
+<html>
+ <body>
+  <h1>Actor Details</h1>
+  <%=render 'shared1/top_nav'%>
+   <%@actors.each do |actor|%>
+   <li><a href="<%=actor_path(actor.id)%>"><%=actor.name%>(<%=actor.movie%>)</a></li>
+   <%end%>
+ </body>
+</html>   

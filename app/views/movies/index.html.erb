@@ -1,0 +1,33 @@
+<html>
+
+
+<body>
+	<h1>Movies World</h1>
+
+<section id=”content”> 
+ <h2>Upcoming Movies</h2>
+  <div>
+  
+   <p>
+   	<ul>
+   		<li><a href="http://www.bollymoviereviewz.com/2011/12/upcoming-bollywood-movies-2012-release.html">This Year</a></li>
+   	</ul>You can keep your memories alive by adding your experience while watching a movie.</p>
+   <p>At the end of the year you will recall these wonderful moments and enjoy every year of your life...</p>  
+  </div>
+  <div>
+     
+   <h2>Movies Watched This Year</h2>
+   <p>
+   	<img src="http://www.makingdifferent.com/wp-content/uploads/2013/03/Movies.gif" width="200" height="200" title="Memories"/>
+   	</p>
+    
+    <%@movies.each do |movie|%>
+   	<li><a href="<%=movie_path(movie.id)%>"><%=movie.name%>(<%=movie.year%>)</a></li>
+    <%end%>
+
+   	  
+  </div>
+</section>
+</body>
+
+</html>

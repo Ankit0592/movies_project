@@ -1,0 +1,13 @@
+<html>
+
+
+<body>
+<h1>Movie Details</h1>
+<br>
+<p><b>Name:</b><%=@actor.name%></p>
+<p><b>Movie:</b><%=@actor.movie%></p>
+<%=link_to "Edit Actor", edit_actor_path(@actor.id)%>
+<%=link_to "Delete", actor_path(@actor), :method=> "DELETE"%>
+
+</body>
+</html>

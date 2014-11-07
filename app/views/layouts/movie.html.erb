@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>MoviesProject</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+<style>
+  html { font-family: Arial;background:rgb(255,170,20); }
+  body { padding: 10px 30px; }
+  h1 { font-size: 2.5em; font-family:Verdana;color:rgb(220,80,23);text-align: center;background:white;}
+  h2 { font-size: 1.2em; }
+  nav { background: black; padding: 5px; }
+nav ul { list-style: none; }
+nav ul li { display: inline; margin-left: 15px; font-weight: bold; }
+nav ul li a { color: white; }
+nav ul li a:visited { color: white; }
+nav ul li a:hover { color: orange; }
+a { text-decoration: italic; color: blue; }
+a:visited { color:purple; }
+a:hover { color: red; }
+img{margin-left: 150px;}
+</style>
+</head>
+<body>
+<%if @demo== true%>
+<%=render 'shared/top_nav'%> 
+<%end%>
+
+<%= yield %>
+
+</body>
+</html>
