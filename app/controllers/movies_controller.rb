@@ -1,6 +1,7 @@
 class MoviesController < ApplicationController
 	layout 'movie'
 	def index
+		# Index page
 	 @demo=true
 		@movies=Movie.all
 	end	
