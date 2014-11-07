@@ -1,31 +1,31 @@
 class MoviesController < ApplicationController
 	layout 'movie'
 	def index
-	 @demo=true
+	 
 		@movies=Movie.all
 	end	
 	def show
-		@demo=true
+		
 		@movie=Movie.find_by_id(params[:id])
 	end
 	def welcome
-		@demo=false
+		
 	end		
 	def new
-			 @demo=true
+			 
 
 		@movie=Movie.new
 		
 	end
   def edit
-  		 @demo=true
+  		 
 
 	 	if params[:id].present?
 	 		@movie=Movie.find_by_id(params[:id])
 	 	end
 	end		
 	def update
-  	 @demo=true
+  	 
 
 		movie=Movie.find_by_id(params[:id])
 		movie.update(movie_params)
@@ -33,7 +33,7 @@ class MoviesController < ApplicationController
 	end	
 
 	def destroy
- 	 @demo=true
+ 	 
 		
 	 	movie=Movie.find_by_id(params[:id])
     movie.delete
@@ -44,7 +44,7 @@ class MoviesController < ApplicationController
     HEAD
 		#create record
 
-	 	 @demo=true
+	 	
 
 	 	movie=Movie.new(movie_params)
 	 	movie.save
@@ -52,7 +52,7 @@ class MoviesController < ApplicationController
 	end	
 	
 	def about
-	 @demo=true
+	 
 
   
 	end	

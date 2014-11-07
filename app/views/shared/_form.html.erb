@@ -1,7 +1,15 @@
-
+<%if params[:controller]== "movies"%>
 <%=form_for @movie do |f|%>
 	
 	Movie:<%=f.text_field :name%><br>
 	Year:<%=f.text_field :year%><br>
 	<%=f.submit "Submit"%>
 	<%end%>
+<%else%>
+  <%=form_for @actor do |f|%>
+	
+	Name:<%=f.text_field :name%><br>
+	Movie:<%=f.text_field :movie%><br>
+	<%=f.submit "Submit"%>
+	<%end%>	
+<%end%>	

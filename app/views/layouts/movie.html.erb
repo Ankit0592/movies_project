@@ -23,7 +23,7 @@ img{margin-left: 150px;}
 </style>
 </head>
 <body>
-<%if @demo== true%>
+<%if params[:action]!= "welcome"%>
 <%=render 'shared/top_nav'%> 
 <%end%>
 
