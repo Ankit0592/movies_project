@@ -41,7 +41,9 @@ class MoviesController < ApplicationController
   end 
  
 	def create
+    HEAD
 		#create record
+
 	 	 @demo=true
 
 	 	movie=Movie.new(movie_params)
