@@ -9,9 +9,9 @@ class ActorsController < ApplicationController
 		
 	end
 	def create
-	 
-	 	actor=Actor.new(actor_params)
-	 	actor.save
+	 	actor=Authentication.new(actor_params) #using service objects
+	 	#actor=Actor.new(actor_params)
+	 	#actor.save
 	 	redirect_to actors_path
 	end	
   
