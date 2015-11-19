@@ -1,0 +1,174 @@
+FORMAT: 1A
+HOST: http://xeomin.herokuapp.com
+
+# XEOMIN apis
+
+APIs for XEOMIN
+
+# Group XEOMIN - GET Requests
+
+## Speciality, Location and Questions Collection [/api/v1/home/specialities_locations_questions_list]
+
+### Speciality, Location and Questions Collection [GET]
+
++ Response 200 (application/json)
+
+        {
+            "success": true,
+            "message": "Data fetched successfully",
+             "details": {
+                "locations": [
+                  {
+                    "id": 2,
+                    "name": "Location 2",
+                    "status": "ACTIVE"
+                  },
+                  {
+                    "id": 1,
+                    "name": "Location 1",
+                    "status": "ACTIVE"
+                  },
+                  {
+                    "id": 3,
+                    "name": "Location 3",
+                    "status": "ACTIVE"
+                  },
+                  {
+                    "id": 4,
+                    "name": "Location 4",
+                    "status": "ACTIVE"
+                  },
+                  {
+                    "id": 5,
+                    "name": "Location 5",
+                    "status": "ACTIVE"
+                  },
+                  {
+                    "id": 6,
+                    "name": "Location 6",
+                    "status": "ACTIVE"
+                  }
+                ],
+            "specialities": [
+              {
+                "id": 1,
+                "name": "Speciality 1",
+                "status": "ACTIVE"
+              },
+              {
+                "id": 2,
+                "name": "Speciality 2",
+                "status": "ACTIVE"
+              },
+              {
+                "id": 4,
+                "name": "Speciality 3",
+                "status": "ACTIVE"
+              },
+              {
+                "id": 5,
+                "name": "Others",
+                "status": "ACTIVE"
+              }
+            ],
+            "questions": [
+              {
+                "id": 3,
+                "before_image": "http://xeomin-questions.s3.amazonaws.com/before.jpg",
+                "after_image": "http://xeomin-questions.s3.amazonaws.com/after.jpg",
+                "correct_answer": "XEOMIN"
+              },
+              {
+                "id": 1,
+                "before_image": "http://xeomin-questions.s3.amazonaws.com/before.jpg",
+                "after_image": "http://xeomin-questions.s3.amazonaws.com/after.jpg",
+                "correct_answer": "XEOMIN"
+              },
+              {
+                "id": 2,
+                "before_image": "http://xeomin-questions.s3.amazonaws.com/before.jpg",
+                "after_image": "http://xeomin-questions.s3.amazonaws.com/after.jpg",
+                "correct_answer": "XEOMIN"
+              },
+              {
+                "id": 6,
+                "before_image": "http://xeomin-questions.s3.amazonaws.com/before.jpg",
+                "after_image": "http://xeomin-questions.s3.amazonaws.com/after.jpg",
+                "correct_answer": "XEOMIN"
+              },
+              {
+                "id": 5,
+                "before_image": "http://xeomin-questions.s3.amazonaws.com/before.jpg",
+                "after_image": "http://xeomin-questions.s3.amazonaws.com/after.jpg",
+                "correct_answer": "XEOMIN"
+              },
+              {
+                "id": 4,
+                "before_image": "http://xeomin-questions.s3.amazonaws.com/before.jpg",
+                "after_image": "http://xeomin-questions.s3.amazonaws.com/after.jpg",
+                "correct_answer": "XEOMIN"
+              }
+            ]
+          }
+        }
+
+# Group XEOMIN - POST Requests
+
+## Submit Answers[/api/v1/home/add_answers_data]
+
+### Submit Answers [POST]
+
++ Request (application/json)
+
+        {
+            "details":
+                {
+                  "location_id": "1",
+                  "speciality_id": "1",
+                  "reason": “text”,
+                  "questions":
+                  [
+                    {
+                        "id":"1",
+                        "answer":"CORRECT"
+                    },
+                    {
+                        "id":"1",
+                        "answer":"CORRECT"
+                    }
+                  ]
+                }
+        }
+
++ Response 200 (application/json)
+
+    {
+       "success": true,
+       "message": "Data fetched successfully",
+       "details": {
+           "locations": [
+               {
+                 "location_id": 5,
+                 "location_name": "Location 1",
+                 "percent": 75
+               },
+               {
+                 "location_id": 6,
+                 "location_name": "Location 2",
+                 "percent": 69
+               }
+            ],
+            "specialities": [
+              {
+                "speciality_id": 6,
+                "speciality_name": "Plastic Surgeonasdasd",
+                "percent": 63
+              },
+              {
+                "speciality_id": 7,
+                "speciality_name": "Plasticity",
+                "percent": 82
+              }
+            ]
+       }
+    }
